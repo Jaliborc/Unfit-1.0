@@ -17,7 +17,7 @@ You should have received a copy of the GNU General Public License
 along with Unfit. If not, see <http://www.gnu.org/licenses/>.
 --]]
 
-local Lib = LibStub:NewLibrary('Unfit-1.0', 1)
+local Lib = LibStub:NewLibrary('Unfit-1.0', 2)
 if not Lib then
 	return
 else
@@ -66,10 +66,14 @@ end
 --[[ API ]]--
 
 function Lib:IsItemUnusable(...)
-	local subClass, _, slot = select(7, GetItemInfo(...))
-	return Lib:IsClassUnusable(subclass, slot)
+	if ... then
+		local subClass, _, slot = select(7, GetItemInfo(...))
+		return Lib:IsClassUnusable(subclass, slot)
+	end
 end
 
 function Lib:IsClassUnusable(subclass, slot)
-	return Unusable[subclass] or slot == 'INVTYPE_WEAPONOFFHAND' and Unusable[3]
+	if subClass then
+		return Unusable[subclass] or slot == 'INVTYPE_WEAPONOFFHAND' and Unusable[3]
+	end
 end
