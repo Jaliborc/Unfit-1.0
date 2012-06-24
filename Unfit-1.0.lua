@@ -39,7 +39,7 @@ elseif Class == 'HUNTER' then
 elseif Class == 'MAGE' then
 	Unusable = {{1, 2, 3, 4, 5, 6, 7, 9, 11, 14, 15}, {3, 4, 5, 6, 7}, true}
 elseif Class == 'MONK' then
-	Unusable = {2, 3, 4, 6, 9, 12, 13, 14, 15, 16}, {4, 5, 6}}
+	Unusable = {{2, 3, 4, 6, 9, 12, 13, 14, 15, 16}, {4, 5, 6}}
 elseif Class == 'PALADIN' then
 	Unusable = {{3, 4, 10, 11, 13, 14, 15, 16}, {}, true}
 elseif Class == 'PRIEST' then
