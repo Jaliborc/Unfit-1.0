@@ -21,15 +21,13 @@ This file is part of Unfit.
 local Lib = LibStub:NewLibrary('Unfit-1.0', 6)
 if not Lib then
 	return
-else
-	Lib.unusable = Lib.unusable or {}
 end
 
 
 --[[ Data ]]--
 
 local _, Class = UnitClass('player')
-local Unusable = Lib.unusable
+local Unusable
 
 if Class == 'DEATHKNIGHT' then
 	Unusable = {{3, 4, 10, 11, 13, 14, 15, 16}, {7}} -- weapons, armor, dual wield
@@ -53,6 +51,8 @@ elseif Class == 'WARLOCK' then
 	Unusable = {{1, 2, 3, 4, 5, 6, 7, 9, 11, 14, 15}, {3, 4, 5, 7}, true}
 elseif Class == 'WARRIOR' then
 	Unusable = {{16}, {}}
+else
+	Unusable = {{}, {}}
 end
 
 for class = 1, 2 do
