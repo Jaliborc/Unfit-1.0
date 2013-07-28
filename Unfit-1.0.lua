@@ -18,7 +18,7 @@ along with the library. If not, see <http://www.gnu.org/licenses/gpl-3.0.txt>.
 This file is part of Unfit.
 --]]
 
-local Lib = LibStub:NewLibrary('Unfit-1.0', 6)
+local Lib = LibStub:NewLibrary('Unfit-1.0', 7)
 if not Lib then
 	return
 end
@@ -65,6 +65,8 @@ for class = 1, 2 do
 	subs = nil
 end
 
+Lib.unusable = Unusable
+
 
 --[[ API ]]--
 
@@ -77,6 +79,6 @@ end
 
 function Lib:IsClassUnusable(subclass, slot)
 	if subclass then
-		return Unusable[subclass] or slot == 'INVTYPE_WEAPONOFFHAND' and Unusable[3]
+		return slot ~= '' and Unusable[subclass] or slot == 'INVTYPE_WEAPONOFFHAND' and Unusable[3]
 	end
 end
