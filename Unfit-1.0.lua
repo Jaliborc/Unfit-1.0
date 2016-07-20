@@ -121,7 +121,7 @@ function Lib:IsItemUnusable(...)
 end
 
 function Lib:IsClassUnusable(class, subclass, slot)
-	if class and subclass then
+	if class and subclass and Lib.unusable[class] then
 		return slot ~= '' and Lib.unusable[class][subclass] or slot == 'INVTYPE_WEAPONOFFHAND' and Lib.cannotDual
 	end
 end
