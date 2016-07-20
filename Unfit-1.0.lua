@@ -18,7 +18,7 @@ along with the library. If not, see <http://www.gnu.org/licenses/gpl-3.0.txt>.
 This file is part of Unfit.
 --]]
 
-local Lib = LibStub:NewLibrary('Unfit-1.0', 8)
+local Lib = LibStub:NewLibrary('Unfit-1.0', 9)
 if not Lib then
 	return
 end
