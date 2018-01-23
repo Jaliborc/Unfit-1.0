@@ -1,4 +1,4 @@
-# Unfit-1.0
+# Unfit-1.0 :no_entry_sign:
 World of Warcraft library to determine which items are usable or not given the player's class.
 
 ### API
