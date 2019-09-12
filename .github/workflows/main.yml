@@ -2,6 +2,8 @@ name: tag
 
 on:
   push:
+    paths:
+      - Unfit-1.0.lua
     branches:
       - master
 
