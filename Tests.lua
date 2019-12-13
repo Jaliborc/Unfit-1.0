@@ -5,8 +5,7 @@ local Replace, IsFalse, IsTrue = WoWUnit.Replace, WoWUnit.IsFalse, WoWUnit.IsTru
 local Unfit = LibStub('Unfit-1.0')
 
 function Tests:Leather()
-	Replace(Unfit.unusable, 'Leather', true)
-
+	Replace(Unfit.unusable[4], 2, true)
 	IsFalse(Unfit:IsItemUnusable(2318)) -- light leather
 	IsTrue(Unfit:IsItemUnusable(6085)) -- leather chest
 end
