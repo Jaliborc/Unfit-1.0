@@ -1,6 +1,6 @@
-if not WoWUnit then return end
+local Tests = WoWUnit and WoWUnit('Unfit', 'PLAYER_LOGIN', 'GET_ITEM_INFO_RECEIVED')
+if not Tests then return end
 
-local Tests = WoWUnit('Unfit', 'PLAYER_LOGIN', 'GET_ITEM_INFO_RECEIVED')
 local Replace, IsFalse, IsTrue = WoWUnit.Replace, WoWUnit.IsFalse, WoWUnit.IsTrue
 local Unfit = LibStub('Unfit-1.0')
 
