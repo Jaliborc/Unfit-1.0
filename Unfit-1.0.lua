@@ -15,7 +15,7 @@ GNU General Public License for more details.
 This file is part of Unfit.
 --]]
 
-local Lib = LibStub:NewLibrary('Unfit-1.0', 11)
+local Lib = LibStub:NewLibrary('Unfit-1.0', 12)
 if not Lib then return end
 
 
@@ -125,4 +125,9 @@ function Lib:IsClassUnusable(class, subclass, slot)
 	if class and subclass and Lib.unusable[class] then
 		return slot ~= '' and Lib.unusable[class][subclass] or slot == 'INVTYPE_WEAPONOFFHAND' and Lib.cannotDual
 	end
+end
+
+function Lib:Embed(object)
+	object.IsItemUnusable = Lib.IsItemUnusable
+	object.IsClassUnusable = Lib.IsClassUnusable
 end
