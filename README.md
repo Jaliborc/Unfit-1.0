@@ -1,4 +1,8 @@
 # Unfit-1.0 :no_entry_sign:
+[![Patreon](http://img.shields.io/badge/news%20&%20rewards-patreon-ff4d42)](https://www.patreon.com/jaliborc)
+[![Paypal](http://img.shields.io/badge/donate-paypal-1d3fe5)](https://www.paypal.me/jaliborc)
+[![Discord](http://img.shields.io/badge/discuss-discord-5865F2)](https://bit.ly/discord-jaliborc)
+
 World of Warcraft library to determine which items are usable or not given the player's class.
 
 ### API
