@@ -21,5 +21,5 @@ To access Unfit functions, simply retrieve it from LibStub:
     -- Call the functions
     Unfit:IsItemUnusable(131683)
 
-### To Devs
+### :warning: Reminder!
 If you use this library, please list it as one of your dependencies in the CurseForge admin system. It's a big help! :+1:
