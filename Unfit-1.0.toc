@@ -1,0 +1,9 @@
+## Title: Unfit
+## Notes: Determines which items are usable for the player's class.
+## Interface: 120001, 120000, 50501, 40402, 30404, 20505, 11507
+## Author: Jaliborc (João Cardoso)
+## Category: Libraries
+## Dependencies: LibStub
+## OptionalDeps: WoWUnit
+
+Unfit-1.0.xml
